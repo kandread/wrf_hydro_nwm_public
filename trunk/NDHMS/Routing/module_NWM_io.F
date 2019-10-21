@@ -1118,7 +1118,7 @@ subroutine output_NoahMP_NWM(outDir,iGrid,output_timestep,itime,startdate,date,i
 
    ! Initialize water type to 16.
    ! NOTE THIS MAY CHANGE IN THE FUTURE!!!!!
-   waterVal = 16
+   waterVal = rt_domain(iGrid)%iswater
 
    ! Initialize NWM dictionary derived type containing all the necessary
    ! metadata for the output file.
